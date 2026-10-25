@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="English" />
+  </tags>
+  <strings>
+    <string id="cple_mcm_title" text="Companion &amp; Party Limits Expanded" />
+    <string id="cple_mcm_group_your_clan" text="Your clan" />
+    <string id="cple_mcm_group_kingdom_clans" text="Your kingdom's clans" />
+    <string id="cple_mcm_group_ai_clans" text="AI clans" />
+    <string id="cple_mcm_kingdom_clans_name" text="Your kingdom's clans" />
+    <string id="cple_mcm_kingdom_clans_hint" text="Off by default. The other clans of the kingdom you belong to use the limits below instead of the base game's. Does nothing while you are not in a kingdom." />
+    <string id="cple_mcm_ai_clans_name" text="AI clans" />
+    <string id="cple_mcm_ai_clans_hint" text="Off by default. AI clans use the limits below instead of the base game's. While Your kingdom's clans is on, your kingdom's clans use that group instead. More AI parties make armies larger and can change war decisions and how many ships AI clans keep. Bandits are never affected." />
+    <string id="cple_mcm_unlimited_companions_name" text="Unlimited companions" />
+    <string id="cple_mcm_unlimited_companions_hint" text="Off by default. Removes the companion limit. The slider below is ignored while this is on." />
+    <string id="cple_mcm_companion_limit_name" text="Companion limit" />
+    <string id="cple_mcm_companion_limit_hint" text="How many companions a clan can have. Default 20. Replaces the base game limit from clan tier and perks." />
+    <string id="cple_mcm_unlimited_parties_name" text="Unlimited parties" />
+    <string id="cple_mcm_unlimited_parties_hint" text="Off by default. Removes the party limit. The slider below is ignored while this is on." />
+    <string id="cple_mcm_party_limit_name" text="Party limit" />
+    <string id="cple_mcm_party_limit_hint" text="How many parties a clan can field, counting the leader's own party. Default 10. Replaces the base game limit from clan tier and perks. Party size is not changed." />
+    <string id="cple_unlimited" text="Unlimited" />
+  </strings>
+</base>
