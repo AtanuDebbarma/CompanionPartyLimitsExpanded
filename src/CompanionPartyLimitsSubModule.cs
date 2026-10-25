@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using HarmonyLib;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement.Categories;
@@ -17,22 +19,40 @@ namespace CompanionPartyLimitsExpanded
 
         private readonly Harmony _harmony = new Harmony("companion.party.limits.expanded");
 
+        // The patching methods are kept separate and not inlined: if a game update removes a method they name,
+        // the failure happens when they are compiled and is caught here instead of stopping the game.
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
-            PatchClanScreen(SymbolExtensions.GetMethodInfo((ClanMembersVM vm) => vm.RefreshMembersList()), "MembersPostfix");
-            PatchClanScreen(SymbolExtensions.GetMethodInfo((ClanPartiesVM vm) => vm.RefreshPartiesList()), "PartiesPostfix");
+            try
+            {
+                PatchClanScreen();
+            }
+            catch (Exception e)
+            {
+                ReportProblem("The clan screen could not be patched: " + e.Message);
+            }
         }
 
         // Models are final here, including replacements registered by other mods.
         public override void OnGameInitializationFinished(Game game)
         {
             base.OnGameInitializationFinished(game);
-            if (game.GameType is Campaign)
+            if (!(game.GameType is Campaign))
+            {
+                return;
+            }
+
+            try
             {
                 LimitPatches.PatchActiveModel(_harmony);
-                ShowPendingProblems();
             }
+            catch (Exception e)
+            {
+                ReportProblem("The limits could not be patched and stay at the base game values: " + e.Message);
+            }
+
+            ShowPendingProblems();
         }
 
         // Debug.Print does not reach the game logs, so problems are also shown in game.
@@ -52,11 +72,18 @@ namespace CompanionPartyLimitsExpanded
             PendingProblems.Clear();
         }
 
-        private void PatchClanScreen(System.Reflection.MethodInfo target, string postfix)
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private void PatchClanScreen()
+        {
+            PatchClanScreenMethod(SymbolExtensions.GetMethodInfo((ClanMembersVM vm) => vm.RefreshMembersList()), "MembersPostfix");
+            PatchClanScreenMethod(SymbolExtensions.GetMethodInfo((ClanPartiesVM vm) => vm.RefreshPartiesList()), "PartiesPostfix");
+        }
+
+        private void PatchClanScreenMethod(MethodInfo target, string postfix)
         {
             try
             {
-                _harmony.Patch(target, postfix: new HarmonyMethod(typeof(ClanScreenPatches).GetMethod(postfix, System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic)));
+                _harmony.Patch(target, postfix: new HarmonyMethod(typeof(ClanScreenPatches).GetMethod(postfix, BindingFlags.Static | BindingFlags.NonPublic)));
             }
             catch (Exception e)
             {

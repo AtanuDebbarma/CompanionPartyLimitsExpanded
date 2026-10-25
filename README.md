@@ -29,7 +29,7 @@ All settings are under **Options > Mod Options > Companion & Party Limits Expand
 | **Your kingdom's clans** | The other clans of the kingdom you belong to. Does nothing while you are not in a kingdom | Off |
 | **AI clans** | Every other AI clan, including your kingdom's clans while *Your kingdom's clans* is off | Off |
 
-The two AI groups are off by default to keep the game's balance: until you switch a group on, its clans keep the base game limits, and its settings stay hidden. More AI parties make armies larger and can change war decisions. Bandits are never affected.
+The two AI groups are off by default to keep the game's balance: until you switch a group on, its clans keep the base game limits, whatever its sliders are set to. More AI parties make armies larger and can change war decisions. Bandits are never affected.
 
 The clan screen shows *Unlimited* when a limit of your clan is removed.
 

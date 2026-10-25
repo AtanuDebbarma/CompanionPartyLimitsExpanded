@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using HarmonyLib;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.ComponentInterfaces;
@@ -15,6 +16,7 @@ namespace CompanionPartyLimitsExpanded
 
         private static readonly HashSet<MethodBase> Patched = new HashSet<MethodBase>();
 
+        [MethodImpl(MethodImplOptions.NoInlining)]
         internal static void PatchActiveModel(Harmony harmony)
         {
             ClanTierModel model = Campaign.Current != null ? Campaign.Current.Models.ClanTierModel : null;
