@@ -2,6 +2,8 @@
 
 A Mount & Blade II: Bannerlord mod that replaces the base game's companion limit and clan party limit with values you set in [Mod Configuration Menu (MCM)][mcm].
 
+**Download:** [Companion & Party Limits Expanded on Nexus Mods][nexus]
+
 ## Why this mod exists
 
 In the base game, a clan can have clan tier + 3 companions, plus one for each of two perks, and can field 1 to 3 parties depending on its tier. Growing a large clan of companions and party leaders means waiting for clan tiers and picking specific perks. This mod lets you set both limits yourself, or remove them.
@@ -33,7 +35,9 @@ The two AI groups are off by default to keep the game's balance: until you switc
 
 The clan screen shows *Unlimited* when a limit of your clan is removed.
 
-The values replace the base game limits instead of adding to them. A setting below what your clan tier and perks would give lowers your limit. Lowering a limit never removes companions or parties you already have; you just cannot add more until you are under it.
+AI diplomacy is unaffected. When the game decides whether a clan joins or leaves a kingdom, whether mercenaries join or leave a kingdom, and whether to declare war or make peace, it uses the base game's party limits. Higher limits do not make lords refuse to join your kingdom or make a kingdom look stronger than its armies; the parties clans actually field still count in full. In the story's final phase, the conspiracy's new lords are also grouped into clans by the base game's party limits.
+
+The values replace the base game limits instead of adding to them. A setting below what your clan tier and perks would give lowers your limit. Lowering a limit or switching a group off never removes companions or parties you already have; you just cannot add more until you are under it. While a clan has more companions than its setting, its companion limit equals the number it has, because the base game removes companions above the limit.
 
 ## Requirements and versions
 
@@ -53,9 +57,10 @@ The mod changes the game only through the base game's public classes and methods
 ## Compatibility
 
 - **Other mods that change the companion limit or the party limit may conflict with this one.** Whichever change runs last wins, so one of the two mods may seem to do nothing. Use only one mod for these limits.
-- **Mods that replace the base game's clan tier model** work: this mod changes the limits of the model the game actually uses.
+- **Mods that replace the base game's clan tier model or diplomacy model** work: this mod changes the models the game actually uses.
 - **Mods that only read the limits**, for example to check whether you can hire another companion, see the values set here.
 - **War Sails** is supported without being required. With *Your kingdom's clans* or *AI clans* on, the AI clans they cover keep more ships, because War Sails bases their ideal fleet size on the party limit.
+- **[Diplomacy][diplomacy]** works alongside this mod. It does not replace the models this mod changes, and the two mods patch different parts of the game. Its war, peace, alliance and tribute decisions go through the base game's scores, which use the base game's party limits as described above, and its own strength figures count the troops clans actually field.
 
 ## Translations
 
@@ -71,7 +76,9 @@ The mod can be added to an existing campaign.
 
 ## Removing the mod from a campaign
 
-The mod adds nothing to saves, so a save still loads without it, and the base game limits return. Companions and parties above the base game limit stay, but you cannot add more until you are under it.
+The mod adds nothing to saves, so a save still loads without it, and the base game limits return. Parties above the base game limit stay, but you cannot create more until you are under it.
+
+Companions are different. With more companions than the base game limit (clan tier + 3, plus perk bonuses), the base game warns you, removes a random companion for good each day starting six days later, and cancels quests that would give you a companion. Before removing the mod, dismiss companions down to the base game limit.
 
 ## Building from source
 
@@ -134,6 +141,8 @@ Companion & Party Limits Expanded is free software under the [GNU General Public
 
 Mount & Blade II: Bannerlord is a trademark of TaleWorlds Entertainment. This project is not affiliated with or endorsed by TaleWorlds.
 
+[nexus]: https://www.nexusmods.com/mountandblade2bannerlord/mods/14288
+[diplomacy]: https://www.nexusmods.com/mountandblade2bannerlord/mods/832
 [mcm]: https://www.nexusmods.com/mountandblade2bannerlord/mods/612
 [butterlib]: https://www.nexusmods.com/mountandblade2bannerlord/mods/2018?tab=description
 [harmony]: https://www.nexusmods.com/mountandblade2bannerlord/mods/2006?tab=description

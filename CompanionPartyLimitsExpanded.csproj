@@ -75,6 +75,10 @@
       <HintPath>$(BannerlordBin)TaleWorlds.ObjectSystem.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="StoryMode">
+      <HintPath>$(BannerlordModules)StoryMode\bin\Win64_Shipping_Client\StoryMode.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="0Harmony">
       <HintPath>$(BannerlordModules)Bannerlord.Harmony\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
       <Private>false</Private>
