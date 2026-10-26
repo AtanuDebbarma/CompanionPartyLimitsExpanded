@@ -55,7 +55,7 @@ namespace CompanionPartyLimitsExpanded
         {
             UseBaseLimits(
                 harmony,
-                AccessTools.Method(typeof(DefeatTheConspiracyQuestBehavior.DefeatTheConspiracyQuest), "InitializeFinalPhase"),
+                AccessTools.Method(typeof(DefeatTheConspiracyQuestBehavior), "InitializeFinalPhase"),
                 "Could not find the story's final phase; with AI clans on, the conspiracy may form fewer, larger clans.");
         }
 

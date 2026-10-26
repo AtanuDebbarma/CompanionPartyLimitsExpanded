@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Fixed the red message *Could not find the story's final phase* that appeared when loading a campaign. 1.0.1 looked for that step of the story in the wrong place, so with *AI clans* on, the conspiracy's new lords were still grouped into fewer, larger clans. They are now grouped as in the base game. Nothing else changed.
+
 ## 1.0.1
 
 - Recruiting lords works again with higher party limits. The game scores a clan joining a kingdom lower the larger the kingdom's combined party limit is, so even the default limit of 10 made lords much harder to recruit, and *Unlimited parties* made it practically impossible. The scores for a clan joining or leaving a kingdom, and for a kingdom taking a clan, now use the party limits of the clan tier model the game uses, without this mod's change. Actual party limits, the clan screen and War Sails fleet sizes still use the values set here.
