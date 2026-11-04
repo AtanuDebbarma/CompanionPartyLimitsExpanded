@@ -2,7 +2,7 @@
 
 ## 1.0.3
 
-- **Clan Tier Expanded (Mod Support).** Optional. When [Clan Tier Expanded](https://github.com/AtanuDebbarma/ClanTierExpanded) is enabled, this mod's companion and party limits still apply on top of that mod's clan-tier model. If it is not loaded, nothing changes.
+- **Clan Tier Expanded (Mod Support).** Optional. When [Clan Tier Expanded](https://www.nexusmods.com/mountandblade2bannerlord/mods/14503) is enabled, this mod's companion and party limits still apply on top of that mod's clan-tier model. If it is not loaded, nothing changes.
 
 ## 1.0.2
 

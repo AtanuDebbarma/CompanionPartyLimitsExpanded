@@ -58,7 +58,7 @@ The mod changes the game only through the base game's public classes and methods
 
 - **Other mods that change the companion limit or the party limit may conflict with this one.** Whichever change runs last wins, so one of the two mods may seem to do nothing. Use only one mod for these limits.
 - **Mods that replace the base game's clan tier model or diplomacy model** work: this mod changes the models the game actually uses.
-- **[Clan Tier Expanded](https://github.com/AtanuDebbarma/ClanTierExpanded) (Mod Support).** Optional. When that mod is enabled, your MCM companion and party limits still apply with its higher clan tiers. If it is not loaded, nothing extra runs.
+- **[Clan Tier Expanded](https://www.nexusmods.com/mountandblade2bannerlord/mods/14503) (Mod Support).** Optional. When that mod is enabled, your MCM companion and party limits still apply with its higher clan tiers. If it is not loaded, nothing extra runs.
 - **Mods that only read the limits**, for example to check whether you can hire another companion, see the values set here.
 - **War Sails** is supported without being required. With *Your kingdom's clans* or *AI clans* on, the AI clans they cover keep more ships, because War Sails bases their ideal fleet size on the party limit.
 - **[Diplomacy][diplomacy]** works alongside this mod. It does not replace the models this mod changes, and the two mods patch different parts of the game. Its war, peace, alliance and tribute decisions go through the base game's scores, which use the base game's party limits as described above, and its own strength figures count the troops clans actually field.
