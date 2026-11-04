@@ -135,7 +135,63 @@ namespace CompanionPartyLimitsExpanded
         // Replacement models from other mods override the base method, so patch the version the active model runs.
         private static MethodInfo Override(Type type, MethodInfo baseMethod)
         {
-            return type.GetMethod(baseMethod.Name, baseMethod.GetParameters().Select(p => p.ParameterType).ToArray());
+            if (type == null || baseMethod == null)
+            {
+                return null;
+            }
+
+            Type[] argTypes = baseMethod.GetParameters().Select(p => p.ParameterType).ToArray();
+            MethodInfo method = type.GetMethod(baseMethod.Name, argTypes);
+
+            // Clan Tier Expanded replaces the clan-tier model with a type that inherits
+            // GetCompanionLimit without declaring it. Harmony rejects that inherited MethodInfo.
+            // Only when that mod is active: rebind to the declared implementation. Otherwise leave alone.
+            if (method != null && ModuleDetect.ClanTierExpandedActive())
+            {
+                method = DeclaredImplementation(method, argTypes);
+            }
+
+            return method;
+        }
+
+        private static MethodInfo DeclaredImplementation(MethodInfo method, Type[] argTypes)
+        {
+            if (method == null)
+            {
+                return null;
+            }
+
+            try
+            {
+                MethodInfo definition = method.GetBaseDefinition();
+                if (definition != null && !definition.IsAbstract)
+                {
+                    method = definition;
+                }
+
+                Type declared = method.DeclaringType;
+                if (declared == null || declared.IsInterface || declared.IsAbstract)
+                {
+                    return method.IsAbstract ? null : method;
+                }
+
+                MethodInfo declaredMethod = declared.GetMethod(
+                    method.Name,
+                    BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly,
+                    null,
+                    argTypes,
+                    null);
+                if (declaredMethod != null && !declaredMethod.IsAbstract)
+                {
+                    return declaredMethod;
+                }
+            }
+            catch
+            {
+                // Soft fail: caller reports and leaves vanilla limits.
+            }
+
+            return method.IsAbstract ? null : method;
         }
 
         private static void Patch(Harmony harmony, MethodInfo target, string postfix)

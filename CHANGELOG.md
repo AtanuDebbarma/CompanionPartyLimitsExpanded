@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- **Clan Tier Expanded (Mod Support).** Optional. When [Clan Tier Expanded](https://github.com/AtanuDebbarma/ClanTierExpanded) is enabled, this mod's companion and party limits still apply on top of that mod's clan-tier model. If it is not loaded, nothing changes.
+
 ## 1.0.2
 
 - Fixed the red message *Could not find the story's final phase* that appeared when loading a campaign. 1.0.1 looked for that step of the story in the wrong place, so with *AI clans* on, the conspiracy's new lords were still grouped into fewer, larger clans. They are now grouped as in the base game. Nothing else changed.
