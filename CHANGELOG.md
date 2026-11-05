@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- - **Clan Tier Expanded (Mod Support).** Optional. During AI diplomacy / conspiracy packing scores, companion limits also leave the active clan-tier model (same as party limits), so Clan Tier Expanded's vanilla-tier companion cap is not overwritten by this mod's MCM values.
+
 ## 1.0.3
 
 - **Clan Tier Expanded (Mod Support).** Optional. When [Clan Tier Expanded](https://www.nexusmods.com/mountandblade2bannerlord/mods/14503) is enabled, this mod's companion and party limits still apply on top of that mod's clan-tier model. If it is not loaded, nothing changes.

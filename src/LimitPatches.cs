@@ -230,7 +230,9 @@ namespace CompanionPartyLimitsExpanded
         private static void CompanionLimitPostfix(Clan __0, ref int __result)
         {
             LimitsSettings settings = LimitsSettings.Instance;
-            if (settings == null)
+            // Same as party limits: during AI diplomacy / conspiracy packing, leave the active clan-tier
+            // model's companion limit (including CTE's vanilla-tier cap) instead of MCM values.
+            if (settings == null || _baseLimitsDepth > 0)
             {
                 return;
             }
