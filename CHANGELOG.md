@@ -2,7 +2,7 @@
 
 ## 1.0.4
 
-- - **Clan Tier Expanded (Mod Support).** Optional. During AI diplomacy / conspiracy packing scores, companion limits also leave the active clan-tier model (same as party limits), so Clan Tier Expanded's vanilla-tier companion cap is not overwritten by this mod's MCM values.
+- **Clan Tier Expanded (Mod Support).** Optional. During AI diplomacy / conspiracy packing scores, companion limits also leave the active clan-tier model (same as party limits), so Clan Tier Expanded's vanilla-tier companion cap is not overwritten by this mod's MCM values.
 
 ## 1.0.3
 
