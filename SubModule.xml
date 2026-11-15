@@ -2,24 +2,24 @@
 <Module>
   <Name value="Companion &amp; Party Limits Expanded"/>
   <Id value="CompanionPartyLimitsExpanded"/>
-  <Version value="v1.0.4"/>
+  <Version value="v1.0.5"/>
   <SingleplayerModule value="true"/>
   <MultiplayerModule value="false"/>
   <DependedModules>
-    <DependedModule Id="Native" DependentVersion="v1.4.8"/>
-    <DependedModule Id="SandBoxCore" DependentVersion="v1.4.8"/>
-    <DependedModule Id="Sandbox" DependentVersion="v1.4.8"/>
-    <DependedModule Id="StoryMode" DependentVersion="v1.4.8"/>
+    <DependedModule Id="Native" DependentVersion="v1.5.7"/>
+    <DependedModule Id="SandBoxCore" DependentVersion="v1.5.7"/>
+    <DependedModule Id="Sandbox" DependentVersion="v1.5.7"/>
+    <DependedModule Id="StoryMode" DependentVersion="v1.5.7"/>
     <DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.4.2.248"/>
-    <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.12.3"/>
+    <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.13.1"/>
   </DependedModules>
   <DependedModuleMetadatas>
-    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.4.8"/>
-    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.4.8"/>
-    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.4.8"/>
-    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="v1.4.8"/>
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v1.5.7"/>
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v1.5.7"/>
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v1.5.7"/>
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="v1.5.7"/>
     <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.4.2.248"/>
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.12.3"/>
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.13.1"/>
     <!-- Soft order only: Clan Tier Expanded support; not required. -->
     <DependedModuleMetadata id="ClanTierExpanded" order="LoadBeforeThis" optional="true"/>
   </DependedModuleMetadatas>

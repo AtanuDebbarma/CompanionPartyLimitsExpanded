@@ -8,6 +8,6 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Keep in step with the Version value in SubModule.xml.
-[assembly: AssemblyVersion("1.0.4.0")]
-[assembly: AssemblyFileVersion("1.0.4.0")]
-[assembly: AssemblyInformationalVersion("1.0.4")]
+[assembly: AssemblyVersion("1.0.5.0")]
+[assembly: AssemblyFileVersion("1.0.5.0")]
+[assembly: AssemblyInformationalVersion("1.0.5")]

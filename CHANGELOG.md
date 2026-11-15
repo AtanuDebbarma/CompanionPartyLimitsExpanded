@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.5
+
+- Targets Bannerlord **1.5.7** / War Sails **1.3.7** (Native / SandBox / StoryMode **v1.5.7**, Harmony **v2.4.2.248**, MCM **v5.13.1**).
+- Assembly informational version aligned with SubModule **v1.0.5**.
+
 ## 1.0.4
 
 - **Clan Tier Expanded (Mod Support).** Optional. During AI diplomacy / conspiracy packing scores, companion limits also leave the active clan-tier model (same as party limits), so Clan Tier Expanded's vanilla-tier companion cap is not overwritten by this mod's MCM values.
